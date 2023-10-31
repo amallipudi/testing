@@ -39,14 +39,14 @@ steps:
 - task: Npm@1
   displayName: 'npm install'
   inputs:
-    workingDir: '$(System.DefaultWorkingDirectory)/_amallipudi_dbtesting'
+    workingDir: '$(System.DefaultWorkingDirectory)'
     verbose: false
 
 - task: Npm@1
   displayName: 'npm install tests'
   inputs:
     command: custom
-    workingDir: '$(System.DefaultWorkingDirectory)/_amallipudi_dbtesting'
+    workingDir: '$(System.DefaultWorkingDirectory)'
     verbose: false
     customCommand: 'run script-chrome'
 
