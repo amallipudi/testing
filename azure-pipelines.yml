@@ -24,3 +24,8 @@ steps:
     npx cypress run
   displayName: 'run e2e tests'
   continueOnError: true
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'Saved failure screenshots'
+    publishLocation: 'Container'
