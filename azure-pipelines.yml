@@ -29,3 +29,30 @@ steps:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'Saved failure screenshots'
     publishLocation: 'Container'
+
+- task: NodeTool@0
+  displayName: 'Use Node 14.x'
+  inputs:
+    versionSpec: 14.x
+
+
+- task: Npm@1
+  displayName: 'npm install'
+  inputs:
+    workingDir: '$(System.DefaultWorkingDirectory)/_amallipudi_dbtesting'
+    verbose: false
+
+- task: Npm@1
+  displayName: 'npm install tests'
+  inputs:
+    command: custom
+    workingDir: '$(System.DefaultWorkingDirectory)/_amallipudi_dbtesting'
+    verbose: false
+    customCommand: 'run script-chrome'
+
+- task: PublishTestResults@2
+  displayName: 'Publish Test Results **/*.xml'
+  inputs:
+    testResultsFiles: '**/*.xml'
+    searchFolder: '$(System.DefaultWorkingDirectory)/_amallipudi_dbtesting/results'
+  condition: succeededOrFailed()
