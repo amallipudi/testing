@@ -19,40 +19,13 @@ steps:
     npm install
     npm run build
   displayName: 'npm install'
-
-- script:
-    npx cypress run
-  displayName: 'run e2e tests & Generate Reports '
-  continueOnError: true
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'Saved failure screenshots'
-    publishLocation: 'Container'
-
-- task: NodeTool@0
-  displayName: 'Use Node 18.x'
-  inputs:
-    versionSpec: 18.x
-
-
-- task: Npm@1
-  displayName: 'npm install'
-  inputs:
-    workingDir: '$(System.DefaultWorkingDirectory)'
-    verbose: false
-- script:
-    npx cypress run
-  displayName: 'run e2e tests & Generate Reports '
-  continueOnError: true
+ 
 - script:
     npm install --save-dev cypress-ntlm-auth
-  displayName: 'ntlm'
-  continueOnError: true
-- script:
     npx cypress-ntlm run
-  displayName: 'run e2e tests & Generate Reports '
+  displayName: 'ntlm & run e2e tests & Generate Reports'
   continueOnError: true
+ 
 - script:
     npm run cy:run-junit-reporter
   continueOnError: true
