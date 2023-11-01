@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress-ntlm open",
+    "cy:run-junit-reporter": "cypress run --reporter junit --reporter-options 'mochaFile=results/TEST-[hash].xml,toConsole=true'",
     "test2": "cypress-ntlm run"
   },
   "devDependencies": {
