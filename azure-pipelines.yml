@@ -45,10 +45,14 @@ steps:
     npx cypress run
   displayName: 'run e2e tests & Generate Reports '
   continueOnError: true
+- script:
+    npm run cy:run-junit-reporter
+  continueOnError: true
+  displayName: 'Execute cypress tests'
 
 - task: PublishTestResults@2
-  displayName: 'Publish Test Results **/*.xml'
   inputs:
-    testResultsFiles: '**/*.xml'
-    searchFolder: '$(System.DefaultWorkingDirectory)/_amallipudi_testing/results'
-  condition: succeededOrFailed()
+    testResultsFormat: 'JUnit'
+    testResultsFiles: '**/TEST-*.xml'
+    failTaskOnFailedTests: true
+    testRunTitle: 'Cypress tests'
