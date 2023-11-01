@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="63.585" tests="3" failures="1">
+  <testsuite name="Root Suite" timestamp="2023-11-01T13:12:16" tests="0" file="cypress\e2e\ananda\todo.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="example to-do app" timestamp="2023-11-01T13:12:16" tests="3" time="63.582" failures="1">
+    <testcase name="example to-do app &quot;before each&quot; hook for &quot;displays two todo items by default&quot;" time="0.000" classname="&quot;before each&quot; hook for &quot;displays two todo items by default&quot;">
+      <failure message="Timed out retrying after 60000ms: Expected to find element: `#okButtonText_1`, but never found it.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `example to-do app`" type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 60000ms: Expected to find element: `#okButtonText_1`, but never found it.
+
+Because this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `example to-do app`
+    at Context.eval (webpack://cypress-junit-azure-devops/./cypress/e2e/ananda/todo.cy.js:21:7)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>

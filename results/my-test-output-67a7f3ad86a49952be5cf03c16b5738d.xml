@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="222.488" tests="2" failures="2">
+  <testsuite name="Root Suite" timestamp="2023-11-01T13:04:15" tests="0" file="cypress\e2e\ananda\RHEA.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="RHEA Application" timestamp="2023-11-01T13:04:15" tests="2" time="222.485" failures="2">
+    <testcase name="RHEA Application verifies the name" time="0.000" classname="verifies the name">
+      <failure message="Timed out retrying after 60000ms: Expected to find element: `#id__7`, but never found it." type="AssertionError"><![CDATA[AssertionError: Timed out retrying after 60000ms: Expected to find element: `#id__7`, but never found it.
+    at Context.eval (webpack://cypress-junit-azure-devops/./cypress/e2e/ananda/RHEA.cy.js:25:9)]]></failure>
+    </testcase>
+    <testcase name="RHEA Application verifies the user " time="0.000" classname="verifies the user ">
+      <failure message="Timed out retrying after 60000ms: `cy.type()` failed because this element:
+
+`&lt;input id=&quot;quickFind_text_0&quot; aria-label=&quot;Strip &quot; aria-labelledby=&quot;tooltip-id_0&quot; data-id=&quot;quickFind_text_0&quot; title=&quot;&quot; placeholder=&quot;&quot; autocomplete=&quot;off&quot; type=&quot;text&quot; class=&quot;pa-ba pa-ax pa-bm pa-ii pa-ij pa-ik &quot; value=&quot;&quot;&gt;`
+
+is being covered by another element:
+
+`&lt;div id=&quot;modalDialogRoot_3_3&quot; tabindex=&quot;-1&quot; class=&quot;pa-f pa-bm pa-a pa-p pa-av flexbox&quot;&gt;...&lt;/div&gt;`
+
+Fix this problem, or use {force: true} to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with" type="CypressError"><![CDATA[CypressError: Timed out retrying after 60000ms: `cy.type()` failed because this element:
+
+`<input id="quickFind_text_0" aria-label="Strip " aria-labelledby="tooltip-id_0" data-id="quickFind_text_0" title="" placeholder="" autocomplete="off" type="text" class="pa-ba pa-ax pa-bm pa-ii pa-ij pa-ik " value="">`
+
+is being covered by another element:
+
+`<div id="modalDialogRoot_3_3" tabindex="-1" class="pa-f pa-bm pa-a pa-p pa-av flexbox">...</div>`
+
+Fix this problem, or use {force: true} to disable error checking.
+
+https://on.cypress.io/element-cannot-be-interacted-with
+    at ensureIsDescendent (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:111897:68)
+    at ensureDescendents (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:111948:5)
+    at ensureDescendentsAndScroll (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:111954:14)
+    at ensureElIsNotCovered (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:112085:5)
+    at runAllChecks (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:112284:52)
+    at retryActionability (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:112321:16)
+    at tryCatcher (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:1807:23)
+    at Promise.attempt.Promise.try (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:4315:29)
+    at whenStable (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:144144:68)
+    at <unknown> (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:144085:14)
+    at tryCatcher (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:1807:23)
+    at Promise._settlePromiseFromHandler (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:1519:31)
+    at Promise._settlePromise (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:1576:18)
+    at Promise._settlePromise0 (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:1621:10)
+    at Promise._settlePromises (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:1701:18)
+    at Promise._fulfill (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:1645:18)
+    at <unknown> (https://login.microsoftonline.com/__cypress/runner/cypress_runner.js:5450:46)
+From Your Spec Code:
+    at Context.eval (webpack://cypress-junit-azure-devops/./cypress/e2e/ananda/RHEA.cy.js:31:36)]]></failure>
+    </testcase>
+  </testsuite>
+</testsuites>
