@@ -12,7 +12,15 @@ describe('RHEA Application', () => {
         })
         
       })
-    it('verifies the user logged in has the correct name', () => { 
+    it('verifies the title', () => { 
+      
+   
+    })
+    it('verifies the name', () => { 
+      
+   
+    })
+    it('verifies the user ', () => { 
       
    
     })
