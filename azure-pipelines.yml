@@ -19,18 +19,23 @@ steps:
     npm install
     npm run build
   displayName: 'npm install'
- 
 - script:
     npm install --save-dev cypress-ntlm-auth
-    npx cypress-ntlm run  cy:run-junit-reporter
+    npx run  cy:run-junit-reporter
+  displayName: 'ntlm & run e2e tests & Generate Reports'
+  continueOnError: true
+- script:
+    npm install --save-dev cypress-ntlm-auth
+    npx cypress-ntlm run  
+    npx run cy:run-junit-reporter
   displayName: 'ntlm & run e2e tests & Generate Reports'
   continueOnError: true
  
 - script:
     npm install --save-dev cypress-ntlm-auth
-    npm cypress run cy:run-junit-reporter
+    npx run  cy:run-junit-reporter
+  displayName: 'ntlm & run e2e tests & Generate Reports'
   continueOnError: true
-  displayName: 'Execute cypress tests'
 
 - task: PublishTestResults@2
   inputs:
