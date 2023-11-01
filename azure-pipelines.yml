@@ -53,6 +53,6 @@ steps:
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
-    testResultsFiles: '**/my-test-output*.xml'
+    testResultsFiles: '**/*.xml'
     failTaskOnFailedTests: true
     testRunTitle: 'Cypress tests'
