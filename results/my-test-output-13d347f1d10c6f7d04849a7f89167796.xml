@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="66.635" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2023-11-01T13:04:37" tests="0" file="cypress\e2e\cotton.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="Azure Active Directory Authentication" timestamp="2023-11-01T13:04:37" tests="1" time="66.631" failures="0">
-    <testcase name="Azure Active Directory Authentication verifies the user logged in has the correct name" time="64.401" classname="verifies the user logged in has the correct name">
-    </testcase>
-  </testsuite>
-</testsuites>

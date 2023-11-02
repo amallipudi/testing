@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="21.132" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2023-10-31T12:59:32" tests="0" file="cypress\e2e\RHEA.cy.js" time="0.000" failures="0">
-  </testsuite>
-  <testsuite name="RHEA Application" timestamp="2023-10-31T12:59:32" tests="1" time="21.130" failures="0">
-    <testcase name="RHEA Application verifies the user logged in has the correct name" time="19.095" classname="verifies the user logged in has the correct name">
-    </testcase>
-  </testsuite>
-</testsuites>
