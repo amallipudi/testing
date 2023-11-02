@@ -27,7 +27,7 @@ steps:
   displayName: 'ntlm & run e2e tests & Generate Reports'
   continueOnError: true
 - script:
-    npx cypress-ntlm run
+    npx cypress-ntlm run --spec "cypress/e2e/WEB04FS.cy.js"
     cy:run-junit-reporter
   continueOnError: true
   displayName: 'Execute cypress tests'
