@@ -7,6 +7,10 @@ describe('FEEDSTOCK CONTRACT Application', () => {
   
 it('FEEDSTOCK  ', (done) =>{
     cy.get('img').should("be.visible")
+    cy.get(':nth-child(1) > :nth-child(16) > #lnkbtnEditDetails > .far').click()
+    cy.get('#txtBxDealNotes').clear().type('testingsacndhdfjkdvkl115151515156d556s56c15sd1c5v cv fdvb targray')
+    cy.get('#lnkUpdateDeal').click()
+    cy.get('.breadcrumb > :nth-child(1) > a').click()
     cy.url().should ('include','/Pages/Deals')
     .then(() => {
         done()    
